@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by dalila lopez</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="app">
+  <p>
+    <label for="name">Name: </label>
+    <input type="text" name="name" v-model="name" id="name" placeholder="Name..."/>
+    <div>{{nameError}}</div>
+  </p>
+  <p>
+    <label for="email">Email: </label>
+    <input type="text" name="email" v-model="email" id="email" placeholder="Email..."/>
+    <div>{{emailError}}</div>
+  </p>
+<br>
+
+  <button type="submit" v-on:click="validate">Submit</button>
+  <div>{{submit}}</div>
+
+  
+</div>
+
+<br>
+<br>
+<br>
+
+<div id="app2">
+  <codenames v-for="nc in codenames" v-bind:name="nc.name" v-bind:codename="nc.codename"></codenames>
+  
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
